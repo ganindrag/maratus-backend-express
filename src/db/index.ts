@@ -25,11 +25,11 @@ const pgp: IMain = pgPromise(initOptions);
 
 // Creating the database instance with extensions:
 const db: ExtendedProtocol = pgp({
-  host: "localhost",
+  host: process.env.DBHOST,
   port: 5432,
-  database: "maratus_asli",
-  user: "gg",
-  password: "rahasia",
+  database: process.env.DBNAME,
+  user: process.env.DBUSER,
+  password: process.env.DBPASS,
   max: 30,
 });
 

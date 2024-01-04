@@ -1,9 +1,9 @@
 import express, { Express, Request, Response } from "express";
 import dotenv from "dotenv";
+dotenv.config();
+
 import db from "./db";
 import { category } from "./db/types";
-
-dotenv.config();
 
 const app: Express = express();
 const port = process.env.PORT || 8000;
